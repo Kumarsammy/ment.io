@@ -463,7 +463,8 @@ angular.module('mentio', [])
                 items: '=mentioItems',
                 triggerChar: '=mentioTriggerChar',
                 forElem: '=mentioFor',
-                parentScope: '=mentioParentScope'
+                parentScope: '=mentioParentScope',
+                mentioContainer: '=mentioContainer',
             },
             templateUrl: function(tElement, tAttrs) {
                 return tAttrs.mentioTemplateUrl !== undefined ? tAttrs.mentioTemplateUrl : 'mentio-menu.tpl.html';
@@ -538,7 +539,11 @@ angular.module('mentio', [])
 
             link: function (scope, element) {
                 element[0].parentNode.removeChild(element[0]);
-                $document[0].body.appendChild(element[0]);
+                if (scope.mentioContainer) {
+                    document.getElementById(scope.mentioContainer).appendChild(element[0])
+                } else {
+                    $document[0].body.appendChild(element[0]);
+                }
                 scope.menuElement = element; // for testing
 
                 if (scope.parentScope) {
