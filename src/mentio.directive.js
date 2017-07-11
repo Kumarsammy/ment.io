@@ -464,7 +464,7 @@ angular.module('mentio', [])
                 triggerChar: '=mentioTriggerChar',
                 forElem: '=mentioFor',
                 parentScope: '=mentioParentScope',
-                mentioContainer: '=mentioContainer',
+                mentioContainer: '=mentioContainer'
             },
             templateUrl: function(tElement, tAttrs) {
                 return tAttrs.mentioTemplateUrl !== undefined ? tAttrs.mentioTemplateUrl : 'mentio-menu.tpl.html';
