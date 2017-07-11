@@ -1,7 +1,7 @@
 {
-  "name": "ment.io",
-  "version": "0.9.24",
-  "description": "Mentions for Angular",
+  "name": "mentio-sammy",
+  "version": "0.9.25",
+  "description": "Fork of Mentions for Angular",
   "main": "dist/mentio.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
