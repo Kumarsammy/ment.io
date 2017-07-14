@@ -56,10 +56,10 @@ gulp.task('dist', ['tpl'], function () {
     .pipe(gjshint())
     .pipe(gjshint.reporter(stylish))
     .pipe(ngAnnotate())
-    .pipe(concat('mentio.js'))
+    .pipe(concat('mentio-sammy.js'))
     .pipe(gulp.dest('dist'))
     .pipe(uglify())
-    .pipe(concat('mentio.min.js'))
+    .pipe(concat('mentio-sammy.min.js'))
     .pipe(gulp.dest('dist'));
 });
 
